@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import androidx.compose.runtime.mutableStateOf
 
 class RelationsViewModel(context: Context) : ViewModel() {
     private val repository = KnowledgeRepository(context)
