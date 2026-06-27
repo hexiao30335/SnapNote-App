@@ -1,5 +1,7 @@
 package com.snapnote.ui.screens
 
+import android.graphics.Paint
+import android.graphics.Color as AndroidColor
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -570,15 +572,16 @@ private fun EnhancedGraphVisualization(
         )
 
         // 中心节点文字标签
+        val centerPaint = Paint().apply {
+            color = AndroidColor.WHITE
+            textSize = 22f
+            isAntiAlias = true
+        }
         drawContext.canvas.drawText(
             "当前",
             centerX - 12,
             centerY + 5,
-            android.graphics.Paint().apply {
-                color = android.graphics.Color.WHITE
-                textSize = 22f
-                isAntiAlias = true
-            }
+            centerPaint
         )
 
         // 绘制关联节点
@@ -622,15 +625,16 @@ private fun EnhancedGraphVisualization(
 
             // 节点标签（关联知识点编号）
             val label = relation.relatedPoint.number
+            val nodePaint = Paint().apply {
+                color = AndroidColor.WHITE
+                textSize = 20f
+                isAntiAlias = true
+            }
             drawContext.canvas.drawText(
                 label,
                 x - if (label.length > 1) 10f else 6f,
                 y + 6f,
-                android.graphics.Paint().apply {
-                    color = android.graphics.Color.WHITE
-                    textSize = 20f
-                    isAntiAlias = true
-                }
+                nodePaint
             )
         }
 
@@ -645,15 +649,16 @@ private fun EnhancedGraphVisualization(
         var legendX = 8f
         for ((label, c) in legendItems) {
             drawCircle(color = c, radius = 6f, center = androidx.compose.ui.geometry.Offset(legendX + 6, legendY))
+            val legendPaint = Paint().apply {
+                textSize = 16f
+                color = AndroidColor.parseColor("#64748B")
+                isAntiAlias = true
+            }
             drawContext.canvas.drawText(
                 label,
                 legendX + 16,
                 legendY + 4,
-                android.graphics.Paint().apply {
-                    textSize = 16f
-                    color = android.graphics.Color.parseColor("#64748B")
-                    isAntiAlias = true
-                }
+                legendPaint
             )
             legendX += 80f
         }

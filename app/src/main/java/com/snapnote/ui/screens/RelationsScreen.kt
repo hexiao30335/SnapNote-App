@@ -45,9 +45,9 @@ import com.snapnote.ui.viewmodel.RelationsViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RelationsScreen(
-    navController: NavController,
-    viewModel: RelationsViewModel = viewModel { RelationsViewModel(LocalContext.current) }
+    navController: NavController
 ) {
+    val viewModel: RelationsViewModel = viewModel { RelationsViewModel(LocalContext.current) }
     val knowledgePoints by viewModel.knowledgePoints.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
 

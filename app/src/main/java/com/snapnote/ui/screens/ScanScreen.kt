@@ -50,9 +50,9 @@ import com.snapnote.ui.viewmodel.ScanViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScanScreen(
-    navController: NavController,
-    viewModel: ScanViewModel = viewModel { ScanViewModel(LocalContext.current) }
+    navController: NavController
 ) {
+    val viewModel: ScanViewModel = viewModel { ScanViewModel(LocalContext.current) }
     val context = LocalContext.current
     val selectedImages = viewModel.selectedImages
     val isProcessing = viewModel.isProcessing.value

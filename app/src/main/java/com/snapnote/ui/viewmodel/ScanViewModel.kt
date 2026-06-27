@@ -184,7 +184,7 @@ class ScanViewModel(context: Context) : ViewModel() {
      */
     private suspend fun saveAnalyzedRelations(noteId: Long) {
         val allKps = knowledgeRepository.getKnowledgePointsByNote(noteId).first()
-        val kpMap = allKps.associateBy { it.title.removePrefix(Regex("^#\\d{2}\\s*")) }
+        val kpMap = allKps.associateBy { it.title.replace(Regex("^#\\d{2}\\s*"), "") }
 
         for (result in _scanResults) {
             if (result.status != ScanStatus.COMPLETED) continue
@@ -195,8 +195,8 @@ class ScanViewModel(context: Context) : ViewModel() {
             )
 
             for (suggestion in suggestions) {
-                val sourceKp = kpMap[suggestion.sourceTitle.removePrefix(Regex("^#\\d{2}\\s*"))]
-                val targetKp = kpMap[suggestion.targetTitle.removePrefix(Regex("^#\\d{2}\\s*"))]
+                val sourceKp = kpMap[suggestion.sourceTitle.replace(Regex("^#\\d{2}\\s*"), "")]
+                val targetKp = kpMap[suggestion.targetTitle.replace(Regex("^#\\d{2}\\s*"), "")]
 
                 if (sourceKp != null && targetKp != null && sourceKp.id != targetKp.id) {
                     try {

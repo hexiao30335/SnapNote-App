@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Cloud
@@ -51,9 +52,9 @@ import com.snapnote.ui.viewmodel.ProfileViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileScreen(
-    navController: NavController,
-    viewModel: ProfileViewModel = viewModel { ProfileViewModel(LocalContext.current) }
+    navController: NavController
 ) {
+    val viewModel: ProfileViewModel = viewModel { ProfileViewModel(LocalContext.current) }
     val totalNotes by viewModel.totalNotes.collectAsState()
     val totalKnowledgePoints by viewModel.totalKnowledgePoints.collectAsState()
     val exportStatus by viewModel.exportStatus.collectAsState()
@@ -138,7 +139,7 @@ fun ProfileScreen(
                     text = "SnapNote v1.0.0",
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.align(Alignment.CenterHorizontally)
+                    modifier = Modifier.fillMaxWidth().wrapContentWidth(Alignment.CenterHorizontally)
                 )
             }
         }

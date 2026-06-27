@@ -57,9 +57,9 @@ import java.util.Locale
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NotesScreen(
-    navController: NavController,
-    viewModel: NotesViewModel = viewModel { NotesViewModel(LocalContext.current) }
+    navController: NavController
 ) {
+    val viewModel: NotesViewModel = viewModel { NotesViewModel(LocalContext.current) }
     val notes by viewModel.notes.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val searchQuery by viewModel.searchQuery.collectAsState()

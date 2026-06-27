@@ -10,9 +10,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.Icons.AutoMirrored
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Share
@@ -49,11 +51,11 @@ import com.snapnote.ui.viewmodel.RelationsViewModel
 @Composable
 fun NoteDetailScreen(
     noteId: Long,
-    navController: NavController,
-    notesViewModel: NotesViewModel = viewModel { NotesViewModel(LocalContext.current) },
-    relationsViewModel: RelationsViewModel = viewModel { RelationsViewModel(LocalContext.current) }
+    navController: NavController
 ) {
     val context = LocalContext.current
+    val notesViewModel: NotesViewModel = viewModel { NotesViewModel(context) }
+    val relationsViewModel: RelationsViewModel = viewModel { RelationsViewModel(context) }
     val note = notesViewModel.notes.collectAsState().value.find { it.id == noteId }
     val knowledgePoints by relationsViewModel.knowledgePoints.collectAsState()
 
