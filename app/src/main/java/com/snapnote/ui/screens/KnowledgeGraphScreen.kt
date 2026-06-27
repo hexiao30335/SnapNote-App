@@ -1,7 +1,6 @@
 package com.snapnote.ui.screens
 
-import android.graphics.Paint
-import android.graphics.Color as AndroidColor
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -19,7 +18,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Image
@@ -75,9 +74,9 @@ import com.snapnote.ui.viewmodel.RelationsViewModel
 @Composable
 fun KnowledgeGraphScreen(
     knowledgePointId: Long,
-    navController: NavController,
-    viewModel: RelationsViewModel = viewModel { RelationsViewModel(LocalContext.current) }
+    navController: NavController
 ) {
+    val viewModel: RelationsViewModel = viewModel { RelationsViewModel(LocalContext.current) }
     val selectedPoint by viewModel.selectedPoint.collectAsState()
     val relations by viewModel.relations.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
@@ -155,7 +154,7 @@ fun KnowledgeGraphScreen(
                 title = { Text("知识关联图谱") },
                 navigationIcon = {
                     IconButton(onClick = { navController.navigateUp() }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "返回")
+                        Icon(Icons.Default.ArrowBack, contentDescription = "返回")
                     }
                 },
                 actions = {
@@ -568,20 +567,7 @@ private fun EnhancedGraphVisualization(
         drawCircle(
             color = Primary,
             radius = 20f,
-            center = androidx.compose.ui.geometry.Offset(centerX, centerY)
-        )
-
-        // 中心节点文字标签
-        val centerPaint = Paint().apply {
-            color = AndroidColor.WHITE
-            textSize = 22f
-            isAntiAlias = true
-        }
-        drawContext.canvas.drawText(
-            "当前",
-            centerX - 12,
-            centerY + 5,
-            centerPaint
+            center = Offset(centerX, centerY)
         )
 
         // 绘制关联节点
@@ -623,18 +609,11 @@ private fun EnhancedGraphVisualization(
                 center = androidx.compose.ui.geometry.Offset(x, y)
             )
 
-            // 节点标签（关联知识点编号）
-            val label = relation.relatedPoint.number
-            val nodePaint = Paint().apply {
-                color = AndroidColor.WHITE
-                textSize = 20f
-                isAntiAlias = true
-            }
-            drawContext.canvas.drawText(
-                label,
-                x - if (label.length > 1) 10f else 6f,
-                y + 6f,
-                nodePaint
+            // 节点编号指示器
+            drawCircle(
+                color = Color.White,
+                radius = 10f,
+                center = Offset(x, y)
             )
         }
 
@@ -646,21 +625,10 @@ private fun EnhancedGraphVisualization(
             "易混淆" to com.snapnote.ui.theme.ConfusionColor,
             "因果推导" to com.snapnote.ui.theme.CausalColor
         )
-        var legendX = 8f
-        for ((label, c) in legendItems) {
-            drawCircle(color = c, radius = 6f, center = androidx.compose.ui.geometry.Offset(legendX + 6, legendY))
-            val legendPaint = Paint().apply {
-                textSize = 16f
-                color = AndroidColor.parseColor("#64748B")
-                isAntiAlias = true
-            }
-            drawContext.canvas.drawText(
-                label,
-                legendX + 16,
-                legendY + 4,
-                legendPaint
-            )
-            legendX += 80f
+        legendItems.forEachIndexed { index, (_, c) ->
+            val legendX = 8f + index * 80f
+            drawCircle(color = c, radius = 6f, center = Offset(legendX + 6, legendY))
+            drawRect(color = c, topLeft = Offset(legendX + 16, legendY - 6), size = androidx.compose.ui.geometry.Size(40f, 12f))
         }
     }
 }

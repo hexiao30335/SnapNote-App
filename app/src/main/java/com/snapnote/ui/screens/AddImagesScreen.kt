@@ -15,7 +15,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.AddPhotoAlternate
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -46,9 +46,9 @@ import com.snapnote.ui.viewmodel.ScanViewModel
 @Composable
 fun AddImagesScreen(
     noteId: Long,
-    navController: NavController,
-    viewModel: ScanViewModel = viewModel { ScanViewModel(LocalContext.current) }
+    navController: NavController
 ) {
+    val viewModel: ScanViewModel = viewModel { ScanViewModel(LocalContext.current) }
     val context = LocalContext.current
     val selectedImages = viewModel.selectedImages
     val isProcessing = viewModel.isProcessing.value
@@ -76,7 +76,7 @@ fun AddImagesScreen(
                 title = { Text("追加图片") },
                 navigationIcon = {
                     IconButton(onClick = { navController.navigateUp() }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "返回")
+                        Icon(Icons.Default.ArrowBack, contentDescription = "返回")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(

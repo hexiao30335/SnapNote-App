@@ -72,8 +72,9 @@ class NoteRepository(context: Context) {
     }
 
     fun getNoteWithDetails(noteId: Long): Flow<Pair<Note?, List<com.snapnote.data.local.entity.KnowledgePointEntity>>> {
-        val noteFlow = noteDao.getNoteById(noteId).let { entity ->
-            kotlinx.coroutines.flow.flow { emit(entity?.toModel()) }
+        val noteFlow = kotlinx.coroutines.flow.flow {
+            val entity = noteDao.getNoteById(noteId)
+            emit(entity?.toModel())
         }
         val kpFlow = knowledgePointDao.getKnowledgePointsByNote(noteId)
         return noteFlow.combine(kpFlow) { note, kps ->

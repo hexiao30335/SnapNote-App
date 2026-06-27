@@ -2,7 +2,7 @@ package com.snapnote.ai
 
 import com.snapnote.data.model.ContentType
 import com.snapnote.data.model.ExtractedKnowledgePoint
-import com.snapnote.data.model.OcrResult
+// OcrResult is defined in the same package (OcrEngine.kt)
 import com.snapnote.data.model.ScanResult
 import com.snapnote.data.model.ScanStatus
 import com.snapnote.data.model.SuggestedRelation
@@ -153,8 +153,8 @@ class KnowledgeExtractor(
         newPoint: ExtractedKnowledgePoint,
         existingPoint: com.snapnote.data.model.KnowledgePoint
     ): Boolean {
-        val newTitle = newPoint.title.removePrefix(Regex("^#\\d{2}\\s*"))
-        val existTitle = existingPoint.title.removePrefix(Regex("^#\\d{2}\\s*"))
+        val newTitle = newPoint.title.replaceFirst(Regex("^#\\d{2}\\s*"), "")
+        val existTitle = existingPoint.title.replaceFirst(Regex("^#\\d{2}\\s*"), "")
 
         // 标题完全包含匹配
         if (newTitle.contains(existTitle) || existTitle.contains(newTitle)) return true
