@@ -16,143 +16,132 @@
     <!-- 知识点卡片1 -->
     <path
         android:fillColor="#FFFFFF"
-        android:fillAlpha="0.95"
-        android:pathData="M112,132 Q112,124 120,124 L230,124 Q238,124 238,132 L238,232 Q238,240 230,240 L120,240 Q112,240 112,232 Z" />
+        android:pathData="M112,124 L238,124 Q238,124 238,132 L112,132 L112,232 Q112,240 120,240 L230,240 Q238,240 238,232 Z" />
     <path
         android:fillColor="#EB9118"
-        android:pathData="M112,124 L238,124 Q238,124 238,132 L112,132 Z" />
+        android:pathData="M112,124 L238,124 L238,132 L112,132 Z" />
 
     <!-- 卡片1 文字线条 -->
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.3"
-        android:pathData="M128,152 L222,152 Q225,152 225,149 Q225,149 222,152" />
+        android:pathData="M128,152 L222,152 L222,156 L128,156 Z" />
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.2"
-        android:pathData="M128,166 L207,166 Q210,166 210,163 Q210,163 207,166" />
+        android:pathData="M128,166 L207,166 L207,170 L128,170 Z" />
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.15"
-        android:pathData="M128,180 L192,180 Q195,180 195,177 Q195,177 192,180" />
+        android:pathData="M128,180 L192,180 L192,184 L128,184 Z" />
     <path
         android:fillColor="#1FB886"
-        android:pathData="M138,208 A6,6 0 1,1 126,208 A6,6 0 1,1 138,208 Z" />
+        android:pathData="M126,202 A6,6 0 1,1 138,202 A6,6 0 1,1 126,202 Z" />
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.25"
-        android:pathData="M152,206 L182,206 Q185,206 185,204 Q185,204 182,206" />
+        android:pathData="M150,202 L185,202 L185,206 L150,206 Z" />
 
     <!-- 知识点卡片2 -->
     <path
         android:fillColor="#FFFFFF"
-        android:fillAlpha="0.95"
-        android:pathData="M274,112 Q274,104 282,104 L392,104 Q400,104 400,112 L400,212 Q400,220 392,220 L282,220 Q274,220 274,212 Z" />
+        android:pathData="M274,104 L400,104 L400,112 L274,112 L274,212 Q274,220 282,220 L392,220 Q400,220 400,212 Z" />
     <path
         android:fillColor="#0EA5E9"
-        android:pathData="M274,104 L400,104 Q400,104 400,112 L274,112 Z" />
+        android:pathData="M274,104 L400,104 L400,112 L274,112 Z" />
 
     <!-- 卡片2 文字线条 -->
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.3"
-        android:pathData="M290,132 L384,132 Q387,132 387,129 Q387,129 384,132" />
+        android:pathData="M290,132 L384,132 L384,136 L290,136 Z" />
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.2"
-        android:pathData="M290,146 L369,146 Q372,146 372,143 Q372,143 369,146" />
+        android:pathData="M290,146 L369,146 L369,150 L290,150 Z" />
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.15"
-        android:pathData="M290,160 L354,160 Q357,160 357,157 Q357,157 354,160" />
+        android:pathData="M290,160 L354,160 L354,164 L290,164 Z" />
     <path
         android:fillColor="#0EA5E9"
-        android:pathData="M300,188 A6,6 0 1,1 288,188 A6,6 0 1,1 300,188 Z" />
+        android:pathData="M288,182 A6,6 0 1,1 300,182 A6,6 0 1,1 288,182 Z" />
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.25"
-        android:pathData="M314,186 L344,186 Q347,186 347,184 Q347,184 344,186" />
+        android:pathData="M312,182 L347,182 L347,186 L312,186 Z" />
 
     <!-- 知识点卡片3（底部） -->
     <path
         android:fillColor="#FFFFFF"
-        android:fillAlpha="0.95"
-        android:pathData="M180,284 Q180,276 188,276 L356,276 Q364,276 364,284 L364,394 Q364,402 356,402 L188,402 Q180,402 180,394 Z" />
+        android:pathData="M180,276 L364,276 L364,284 L180,284 L180,394 Q180,402 188,402 L356,402 Q364,402 364,394 Z" />
     <path
         android:fillColor="#8B5CF6"
-        android:pathData="M180,276 L364,276 Q364,276 364,284 L180,284 Z" />
+        android:pathData="M180,276 L364,276 L364,284 L180,284 Z" />
 
     <!-- 卡片3 文字线条 -->
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.3"
-        android:pathData="M196,304 L348,304 Q351,304 351,301 Q351,301 348,304" />
+        android:pathData="M196,304 L348,304 L348,308 L196,308 Z" />
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.2"
-        android:pathData="M196,318 L322,318 Q325,318 325,315 Q325,315 322,318" />
+        android:pathData="M196,318 L322,318 L322,322 L196,322 Z" />
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.15"
-        android:pathData="M196,332 L310,332 Q313,332 313,329 Q313,329 310,332" />
+        android:pathData="M196,332 L310,332 L310,336 L196,336 Z" />
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.15"
-        android:pathData="M196,346 L332,346 Q335,346 335,343 Q335,343 332,346" />
+        android:pathData="M196,346 L332,346 L332,350 L196,350 Z" />
     <path
         android:fillColor="#8B5CF6"
-        android:pathData="M206,370 A6,6 0 1,1 194,370 A6,6 0 1,1 206,370 Z" />
+        android:pathData="M194,364 A6,6 0 1,1 206,364 A6,6 0 1,1 194,364 Z" />
     <path
         android:fillColor="#134E4A"
         android:fillAlpha="0.25"
-        android:pathData="M220,368 L260,368 Q263,368 263,366 Q263,366 260,368" />
+        android:pathData="M218,364 L263,364 L263,368 L218,368 Z" />
 
-    <!-- 关联连线 -->
+    <!-- 关联连线（实线替代虚线） -->
     <path
-        android:fillColor="#FFFFFF"
-        android:fillAlpha="0.7"
-        android:strokeWidth="3"
         android:strokeColor="#FFFFFF"
-        android:strokeAlpha="0.6"
-        android:strokeDasharray="6,4"
-        android:pathData="M242,240 L268,276" />
+        android:strokeWidth="3"
+        android:strokeAlpha="0.5"
+        android:pathData="M240,240 L270,276" />
     <path
         android:fillColor="#FFFFFF"
-        android:fillAlpha="0.8"
-        android:pathData="M252,258 A5,5 0 1,1 242,258 A5,5 0 1,1 252,258 Z" />
+        android:fillAlpha="0.6"
+        android:pathData="M250,256 A5,5 0 1,1 240,256 A5,5 0 1,1 250,256 Z" />
 
     <path
-        android:fillColor="#FFFFFF"
-        android:fillAlpha="0.7"
-        android:strokeWidth="3"
         android:strokeColor="#FFFFFF"
-        android:strokeAlpha="0.6"
-        android:strokeDasharray="6,4"
-        android:pathData="M307,220 L302,276" />
+        android:strokeWidth="3"
+        android:strokeAlpha="0.5"
+        android:pathData="M305,220 L298,276" />
     <path
         android:fillColor="#FFFFFF"
-        android:fillAlpha="0.8"
-        android:pathData="M301,248 A5,5 0 1,1 291,248 A5,5 0 1,1 301,248 Z" />
+        android:fillAlpha="0.6"
+        android:pathData="M297,246 A5,5 0 1,1 287,246 A5,5 0 1,1 297,246 Z" />
 
     <!-- 相机角标 -->
     <path
         android:fillColor="#EB9118"
-        android:pathData="M412,120 A32,32 0 1,1 388,120 A32,32 0 1,1 412,120 Z" />
+        android:pathData="M400,100 A32,32 0 1,1 400,164 A32,32 0 1,1 400,100 Z" />
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M408,120 A28,28 0 1,1 392,120 A28,28 0 1,1 408,120 Z" />
+        android:pathData="M400,106 A26,26 0 1,1 400,158 A26,26 0 1,1 400,106 Z" />
     <path
-        android:fillColor="none"
         android:strokeColor="#EB9118"
         android:strokeWidth="3"
         android:strokeLineCap="round"
-        android:pathData="M388,112 L408,112 Q412,112 412,116 L412,126 Q412,130 408,130 L388,130 Q384,130 384,126 L384,116 Q384,112 388,112 Z" />
+        android:pathData="M384,114 L416,114 L416,138 Q416,142 412,142 L388,142 Q384,142 384,138 Z" />
     <path
-        android:fillColor="none"
         android:strokeColor="#EB9118"
         android:strokeWidth="2.5"
-        android:pathData="M398,121 A4,4 0 1,1 394,121 A4,4 0 1,1 398,121 Z" />
+        android:pathData="M400,126 A4,4 0 1,1 400,134 A4,4 0 1,1 400,126 Z" />
     <path
         android:fillColor="#EB9118"
-        android:pathData="M394,107 L406,107 Q408,107 408,109 L408,113 Q408,113 406,113 L394,113 Q392,113 392,111 L392,109 Q392,107 394,107 Z" />
+        android:pathData="M392,100 L408,100 Q410,100 410,102 L410,114 L390,114 L390,102 Q390,100 392,100 Z" />
 </vector>
