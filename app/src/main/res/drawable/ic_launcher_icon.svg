@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1FB886"/>
+      <stop offset="100%" stop-color="#0D9468"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#047857" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- 圆角背景 -->
+  <rect x="32" y="32" width="448" height="448" rx="96" ry="96" fill="url(#bg)" filter="url(#shadow)"/>
+  <rect x="32" y="32" width="448" height="448" rx="96" ry="96" fill="url(#shine)"/>
+
+  <!-- 知识点卡片组 -->
+  <!-- 卡片1（左上） -->
+  <rect x="100" y="130" width="130" height="100" rx="12" fill="#ffffff" fill-opacity="0.95"/>
+  <rect x="100" y="130" width="130" height="8" rx="4" fill="#EB9118"/>
+  <line x1="116" y1="158" x2="210" y2="158" stroke="#134E4A" stroke-width="3" stroke-linecap="round" stroke-opacity="0.3"/>
+  <line x1="116" y1="172" x2="195" y2="172" stroke="#134E4A" stroke-width="3" stroke-linecap="round" stroke-opacity="0.2"/>
+  <line x1="116" y1="186" x2="180" y2="186" stroke="#134E4A" stroke-width="3" stroke-linecap="round" stroke-opacity="0.15"/>
+  <circle cx="126" cy="212" r="6" fill="#1FB886"/>
+  <line x1="140" y1="212" x2="170" y2="212" stroke="#134E4A" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.25"/>
+
+  <!-- 卡片2（右上） -->
+  <rect x="262" y="110" width="130" height="100" rx="12" fill="#ffffff" fill-opacity="0.95"/>
+  <rect x="262" y="110" width="130" height="8" rx="4" fill="#0EA5E9"/>
+  <line x1="278" y1="138" x2="372" y2="138" stroke="#134E4A" stroke-width="3" stroke-linecap="round" stroke-opacity="0.3"/>
+  <line x1="278" y1="152" x2="357" y2="152" stroke="#134E4A" stroke-width="3" stroke-linecap="round" stroke-opacity="0.2"/>
+  <line x1="278" y1="166" x2="342" y2="166" stroke="#134E4A" stroke-width="3" stroke-linecap="round" stroke-opacity="0.15"/>
+  <circle cx="288" cy="192" r="6" fill="#0EA5E9"/>
+  <line x1="302" y1="192" x2="332" y2="192" stroke="#134E4A" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.25"/>
+
+  <!-- 卡片3（底部居中） -->
+  <rect x="168" y="280" width="176" height="110" rx="12" fill="#ffffff" fill-opacity="0.95"/>
+  <rect x="168" y="280" width="176" height="8" rx="4" fill="#8B5CF6"/>
+  <line x1="184" y1="308" x2="326" y2="308" stroke="#134E4A" stroke-width="3" stroke-linecap="round" stroke-opacity="0.3"/>
+  <line x1="184" y1="322" x2="310" y2="322" stroke="#134E4A" stroke-width="3" stroke-linecap="round" stroke-opacity="0.2"/>
+  <line x1="184" y1="336" x2="298" y2="336" stroke="#134E4A" stroke-width="3" stroke-linecap="round" stroke-opacity="0.15"/>
+  <line x1="184" y1="350" x2="320" y2="350" stroke="#134E4A" stroke-width="3" stroke-linecap="round" stroke-opacity="0.15"/>
+  <circle cx="194" cy="374" r="6" fill="#8B5CF6"/>
+  <line x1="208" y1="374" x2="248" y2="374" stroke="#134E4A" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.25"/>
+
+  <!-- 关联连线 -->
+  <line x1="230" y1="230" x2="256" y2="280" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.6" stroke-dasharray="6,4"/>
+  <circle cx="243" cy="255" r="5" fill="#ffffff" fill-opacity="0.8"/>
+
+  <line x1="295" y1="210" x2="290" y2="280" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.6" stroke-dasharray="6,4"/>
+  <circle cx="292" cy="245" r="5" fill="#ffffff" fill-opacity="0.8"/>
+
+  <!-- 相机/扫描角标 -->
+  <circle cx="400" cy="120" r="32" fill="#EB9118"/>
+  <circle cx="400" cy="120" r="28" fill="#ffffff"/>
+  <!-- 相机图标 -->
+  <rect x="386" y="112" width="28" height="18" rx="4" fill="none" stroke="#EB9118" stroke-width="2.5"/>
+  <circle cx="400" cy="121" r="5" fill="none" stroke="#EB9118" stroke-width="2"/>
+  <rect x="394" y="108" width="12" height="5" rx="2" fill="#EB9118"/>
+</svg>
