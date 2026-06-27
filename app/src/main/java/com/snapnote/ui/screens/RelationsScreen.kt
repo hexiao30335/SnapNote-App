@@ -47,7 +47,8 @@ import com.snapnote.ui.viewmodel.RelationsViewModel
 fun RelationsScreen(
     navController: NavController
 ) {
-    val viewModel: RelationsViewModel = viewModel { RelationsViewModel(LocalContext.current) }
+    val context = LocalContext.current
+    val viewModel: RelationsViewModel = viewModel { RelationsViewModel(context) }
     val knowledgePoints by viewModel.knowledgePoints.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
 

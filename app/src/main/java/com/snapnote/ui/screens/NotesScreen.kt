@@ -59,7 +59,8 @@ import java.util.Locale
 fun NotesScreen(
     navController: NavController
 ) {
-    val viewModel: NotesViewModel = viewModel { NotesViewModel(LocalContext.current) }
+    val context = LocalContext.current
+    val viewModel: NotesViewModel = viewModel { NotesViewModel(context) }
     val notes by viewModel.notes.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val searchQuery by viewModel.searchQuery.collectAsState()

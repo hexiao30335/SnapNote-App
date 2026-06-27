@@ -48,8 +48,8 @@ fun AddImagesScreen(
     noteId: Long,
     navController: NavController
 ) {
-    val viewModel: ScanViewModel = viewModel { ScanViewModel(LocalContext.current) }
     val context = LocalContext.current
+    val viewModel: ScanViewModel = viewModel { ScanViewModel(context) }
     val selectedImages = viewModel.selectedImages
     val isProcessing = viewModel.isProcessing.value
     val scanResults = viewModel.scanResults

@@ -54,7 +54,8 @@ import com.snapnote.ui.viewmodel.ProfileViewModel
 fun ProfileScreen(
     navController: NavController
 ) {
-    val viewModel: ProfileViewModel = viewModel { ProfileViewModel(LocalContext.current) }
+    val context = LocalContext.current
+    val viewModel: ProfileViewModel = viewModel { ProfileViewModel(context) }
     val totalNotes by viewModel.totalNotes.collectAsState()
     val totalKnowledgePoints by viewModel.totalKnowledgePoints.collectAsState()
     val exportStatus by viewModel.exportStatus.collectAsState()

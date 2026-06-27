@@ -76,7 +76,8 @@ fun KnowledgeGraphScreen(
     knowledgePointId: Long,
     navController: NavController
 ) {
-    val viewModel: RelationsViewModel = viewModel { RelationsViewModel(LocalContext.current) }
+    val context = LocalContext.current
+    val viewModel: RelationsViewModel = viewModel { RelationsViewModel(context) }
     val selectedPoint by viewModel.selectedPoint.collectAsState()
     val relations by viewModel.relations.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
