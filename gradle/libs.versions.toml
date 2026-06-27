@@ -48,4 +48,4 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-ksp = { id = "com.google.devtools.ksp", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version = "1.9.20-1.0.14" }
